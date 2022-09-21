@@ -3,15 +3,15 @@ import './App.css';
 
 function App() {
   const [amount, setAmount] = useState(0);
-  const [flipped, setFlipped] = useState(false);
+  const [inverted, setInverted] = useState(false);
 
   const onChange = (event) => { 
     setAmount(event.target.value);
   };
   const reset = () => setAmount(0);
-  const onFlip = () => {
+  const onInvert = () => {
     reset();
-    setFlipped((current) => !current);
+    setInverted((current) => !current);
   }
 
   return (
@@ -20,30 +20,30 @@ function App() {
         <div>
           <label htmlFor='minutes'>Minutes</label>
           <input 
-            value={flipped ? Math.round(amount*60) : amount}
+            value={inverted ? Math.round(amount*60) : amount}
             id='minutes'
             placeholder='Minutes'
             type='number'
             onChange={onChange}
-            // disabled={flipped === true}
-            disabled={flipped}
+            // disabled={inverted === true}
+            disabled={inverted}
             />
             <h4>You want to convert {amount} min </h4>
         </div>
         <div>
         <label htmlFor='hours'>Hours</label>
         <input 
-            value={flipped ? amount : Math.round(amount/60)} 
+            value={inverted ? amount : Math.round(amount/60)} 
             id='hours' 
             placeholder='Hours' 
             type='number'
             onChange={onChange}
-            // disabled={flipped === false}
-            disabled={!flipped}
+            // disabled={inverted === false}
+            disabled={!inverted}
             />
         </div>
         <button onClick={reset}>Reset</button>
-        <button onClick={onFlip}>Flip</button>
+        <button onClick={onInvert}>Flip</button>
     </div>
   );
 }
