@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/react-super-converter/static/css/main.31d6cfe0.css",
+    "main.js": "/react-super-converter/static/js/main.9b29deed.js",
+    "index.html": "/react-super-converter/index.html",
+    "main.9b29deed.js.map": "/react-super-converter/static/js/main.9b29deed.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.9b29deed.js"
+  ]
+}
